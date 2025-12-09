@@ -6,12 +6,12 @@
  */
 
 :root {
-  /* Colors */
-  --bg: #f8f8f8;
-  --text: #1a1a1a;
-  --accent: #000;
-  --muted: #666;
-  --border: #e0e0e0;
+  /* Colors - Light Blue Theme */
+  --bg: #cae7f9;
+  --text: #1b2855;
+  --accent: #2d3e50;
+  --muted: #4a5568;
+  --border: #cae7f9;
 
   /* Typography */
   --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
