@@ -104,21 +104,26 @@ nav {
 
 /* Welcome Text */
 .hero-text {
-  padding: 2rem 0;
+  padding: 0;
+  position: absolute;
+  top: 120px;
+  right: 4rem;
+  max-width: 280px;
 }
 
 .welcome-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 400;
-  margin-bottom: 1.5rem;
+  font-size: 30px;
+  margin-bottom: 0.5rem;
   color: var(--text);
+  text-align: left;
 }
 
 .welcome-description {
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  line-height: 1.7;
+  font-size: 20px;
+  line-height: 1.4;
   color: var(--text);
-  max-width: 500px;
+  text-align: left;
+  max-width: 100%;
 }
 
 /* Hero Name */
