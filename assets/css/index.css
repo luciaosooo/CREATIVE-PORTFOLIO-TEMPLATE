@@ -19,5 +19,5 @@
 @import url("layout.css");
 @import url("site.css");
 @import url("theme.css");
-@import url("[otros].css");
+@import url("base.css");
 @import url("type.css");

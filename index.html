@@ -13,6 +13,7 @@
       <ul class="nav-links">
         <li><a href="#work">work</a></li>
         <li><a href="#about">about me</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
 
@@ -25,8 +26,6 @@
             <img src="" alt="Profile Picture" class="parallax-image" />
           </div>
         </div>
-
-        <!-- Right side: Welcome text -->
         <div class="hero-text">
           <h2 class="welcome-title">Welcome!</h2>
           <p class="welcome-description">
@@ -35,11 +34,57 @@
           </p>
         </div>
       </div>
-
-      <!-- Name below -->
       <h1 class="hero-name">Lucía Álvarez Osorio</h1>
     </section>
+    <!-- Projects Section -->
+    <section id="work" class="projects-section">
+      <div class="projects-container">
+        <div class="projects-header" data-reveal>
+          <h2 class="projects-title">Some of my designs</h2>
+          <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">
+              see all
+            </button>
+            <button class="filter-btn" data-filter="branding">
+              branding
+            </button>
+            <button class="filter-btn" data-filter="ux-design">
+              ux design
+            </button>
+            <button class="filter-btn" data-filter="editorial">
+              editorial
+            </button>
+          </div>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card" data-category="branding" data-reveal>
+            <div class="project-card-inner">
+              <div class="project-image">
+                <img 
+                  src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop" 
+                  alt="Brand Identity Project"
+                  loading="lazy"
+                />
+                <div class="project-overlay">
+                  <span class="project-view">View Project →</span>
+                </div>
+              </div>
+               <div class="project-content">
+            <div class="project-tags">
+              <span class="project-tag">branding</span>
+            </div>
+            <h3 class="project-name">Brand Identity Design</h3>
+            <p class="project-description">
+              Complete visual identity system for a modern tech startup
+            </p>
+          </div>
+        </div>
+      </article>
+    <!-- About Section -->
 
+    <!-- Contact Section -->
+
+    <!-- Scripts -->
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
