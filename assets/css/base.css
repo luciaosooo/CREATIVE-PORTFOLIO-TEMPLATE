@@ -1,35 +1,217 @@
 /**
- * ─────────────────────────────────────────────
- *  BASE STYLES & FLUID TYPOGRAPHY
- * ─────────────────────────────────────────────
+ * ═══════════════════════════════════════════
+ *  BASE.CSS - Foundation & Typography
+ * ═══════════════════════════════════════════
+ *  Color Palette: Light Blue, Dark Brown, Cream
  */
 
 :root {
-  /* Fluid Typography Scale */
+  /* === COLOR PALETTE === */
+  --color-blue-light: #cae7f9;
+  --color-dark-blue: #1b2855;
+  --color-cream: #f7f3e8;
+  --color-white: #ffffff;
+
+  /* Semantic Colors */
+  --color-bg-primary: var(--color-blue-light);
+  --color-bg-secondary: var(--color-cream);
+  --color-text-primary: var(--color-dark-blue);
+  --color-text-muted: #1b2855ae;
+  --color-accent: var(--color-dark-blue);
+
+  /* === FLUID TYPOGRAPHY === */
+  /* Scale: 320px → 1920px */
   --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
   --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
-  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
-  --text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
-  --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
-  --text-2xl: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
-  --text-3xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
-  --text-4xl: clamp(2.5rem, 1.75rem + 3.75vw, 4rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.375vw, 1.313rem);
+  --text-xl: clamp(1.313rem, 1.2rem + 0.563vw, 1.75rem);
+  --text-2xl: clamp(1.75rem, 1.55rem + 1vw, 2.5rem);
+  --text-3xl: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --text-4xl: clamp(2.5rem, 2rem + 3vw, 5rem);
 
-  /* Fluid Spacing */
-  --space-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
-  --space-sm: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
-  --space-md: clamp(1rem, 0.8rem + 1vw, 1.5rem);
-  --space-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
-  --space-xl: clamp(2rem, 1.5rem + 2.5vw, 4rem);
-  --space-2xl: clamp(3rem, 2rem + 5vw, 6rem);
+  /* === FLUID SPACING === */
+  --space-xs: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+  --space-sm: clamp(0.75rem, 0.65rem + 0.5vw, 1.25rem);
+  --space-md: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
+  --space-lg: clamp(2rem, 1.5rem + 2.5vw, 4rem);
+  --space-xl: clamp(3rem, 2rem + 5vw, 6rem);
+  --space-2xl: clamp(4rem, 3rem + 5vw, 8rem);
+
+  /* === LAYOUT === */
+  --container-max: 1400px;
+  --container-padding: clamp(1.5rem, 5vw, 4rem);
+
+  /* === TRANSITIONS === */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* === BORDERS === */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-full: 9999px;
+
+  /* === SHADOWS === */
+  --shadow-sm: 0 2px 8px #565a6832;
+  --shadow-md: 0 4px 16px #565a6832;
+  --shadow-lg: 0 12px 32px #565a6832;
 }
 
-section {
-  padding-block: var(--space-2xl);
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-  section {
-    padding-block: var(--space-xl);
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background: var(--color-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* === TYPOGRAPHY === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "PPEditorialNew-Regular";
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--text-4xl);
+}
+h2 {
+  font-size: var(--text-3xl);
+}
+h3 {
+  font-size: var(--text-2xl);
+}
+h4 {
+  font-size: var(--text-xl);
+}
+h5 {
+  font-size: var(--text-lg);
+}
+h6 {
+  font-size: var(--text-base);
+}
+
+p {
+  margin: 0 0 1rem 0;
+  line-height: 1.7;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === UTILITIES === */
+.section-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.section-title {
+  font-size: var(--text-3xl);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  font-size: var(--text-base);
+  text-align: center;
+  border-radius: var(--border-radius-full);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background: #1b28557d;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-dark-blue);
+  border-color: var(--color-dark-blue);
+}
+
+.btn-secondary:hover {
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+}
+
+/* === ACCESSIBILITY === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
+}
+
+/* Focus visible for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-dark-blue);
+  outline-offset: 4px;
+}
+
+/* === SELECTION === */
+::selection {
+  background: var(--color-dark-blue);
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background: var(--color-dark-blue);
+  color: var(--color-white);
 }

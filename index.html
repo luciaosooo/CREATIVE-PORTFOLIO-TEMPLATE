@@ -3,83 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucía Álvarez Osorio - Portfolio</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Lucía Álvarez Osorio - Graphic Designer & Multimedia Artist</title>
+    <meta
+      name="title"
+      content="Lucía Álvarez Osorio - Graphic Designer & Multimedia Artist"
+    />
+    <meta
+      name="description"
+      content="Madrid-based graphic designer specializing in branding, visual identity, and editorial design. Explore my portfolio of creative work and design projects."
+    />
+    <meta name="author" content="Lucía Álvarez Osorio" />
+    <meta
+      name="keywords"
+      content="graphic design, branding, visual identity, editorial design, Madrid designer, portfolio, multimedia design"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/apple-touch-icon.png"
+    />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#CAE7F9" />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
   <body>
     <!-- Navigation -->
-    <nav>
-      <a href="#" class="logo">LAO.</a>
+    <nav class="nav" data-nav>
+      <a href="#" class="nav-logo">LAO.</a>
       <ul class="nav-links">
         <li><a href="#work">work</a></li>
-        <li><a href="#about">about me</a></li>
+        <li><a href="#about">about</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-grid">
-        <!-- Left side: Parallax Image -->
-        <div class="hero-image-container">
-          <div class="hero-image-frame">
-            <img src="" alt="Profile Picture" class="parallax-image" />
-          </div>
-        </div>
-        <div class="hero-text">
-          <h2 class="welcome-title">Welcome!</h2>
-          <p class="welcome-description">
-            I'm a Graphic Design and Multimedia student based in Madrid,
-            passionate about branding and creating visual identities.
-          </p>
-        </div>
-      </div>
-      <h1 class="hero-name">Lucía Álvarez Osorio</h1>
+    <!-- Hero Section with Parallax -->
+    <section class="hero" id="home">
+      <div class="hero-parallax-bg" data-parallax="0.3"></div>
+
+      <div class="hero-container">
+<div class="hero-content" data-reveal="fade-up">
+  <h1 class="hero-title">Lucía Álvarez Osorio</h1>
+  
+  <div class="hero-image" data-parallax-image>
+    <img 
+      src="https://ik.imagekit.io/gwcamwpxu/portfolio/profile.png" 
+      alt="Your picture"
+    />
+  </div>
+  
+  <p class="hero-description">
+    I'm a Graphic Design and Multimedia student based in Madrid,
+    passionate about branding and creating visual identities.
+  </p>
+  
+  <div class="hero-scroll-indicator">
+    <span class="scroll-text">Scroll to explore</span>
+    <svg
+      class="scroll-arrow"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path
+        d="M12 5V19M12 19L5 12M12 19L19 12"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+</div>
     </section>
     <!-- Projects Section -->
-    <section id="work" class="projects-section">
-      <div class="projects-container">
-        <div class="projects-header" data-reveal>
-          <h2 class="projects-title">Some of my designs</h2>
-          <div class="filter-controls">
-            <button class="filter-btn active" data-filter="all">
-              see all
-            </button>
-            <button class="filter-btn" data-filter="branding">
-              branding
-            </button>
-            <button class="filter-btn" data-filter="ux-design">
-              ux design
-            </button>
-            <button class="filter-btn" data-filter="editorial">
-              editorial
-            </button>
-          </div>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card" data-category="branding" data-reveal>
-            <div class="project-card-inner">
-              <div class="project-image">
-                <img 
-                  src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop" 
-                  alt="Brand Identity Project"
-                  loading="lazy"
-                />
-                <div class="project-overlay">
-                  <span class="project-view">View Project →</span>
-                </div>
-              </div>
-               <div class="project-content">
-            <div class="project-tags">
-              <span class="project-tag">branding</span>
-            </div>
-            <h3 class="project-name">Brand Identity Design</h3>
-            <p class="project-description">
-              Complete visual identity system for a modern tech startup
-            </p>
-          </div>
-        </div>
-      </article>
+
     <!-- About Section -->
 
     <!-- Contact Section -->

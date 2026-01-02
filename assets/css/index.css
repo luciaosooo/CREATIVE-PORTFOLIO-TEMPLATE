@@ -2,6 +2,10 @@
  * ─────────────────────────────────────────────
  *  CSS Barrel Index
  * ─────────────────────────────────────────────
+/**
+ * ─────────────────────────────────────────────
+ *  CSS Barrel Index
+ * ─────────────────────────────────────────────
  *
  *  This file uses the "barrel pattern" to re-export (import) a collection
  *  of CSS modules in a single place, making project imports simpler and
@@ -16,6 +20,7 @@
  */
 
 @import url("reset.css");
+@import url("components.css");
 @import url("layout.css");
 @import url("site.css");
 @import url("theme.css");
