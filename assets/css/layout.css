@@ -1,0 +1,71 @@
+/* ═══════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 2rem 0;
+  background: rgba(202, 231, 249, 0.753);
+  backdrop-filter: blur(12px);
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+}
+
+.nav.scrolled {
+  background: rgb(202, 231, 249);
+  backdrop-filter: blur(20px);
+  padding: 1.5rem 0;
+  min-height: 70px;
+}
+
+.nav-logo {
+  position: absolute;
+  left: var(--container-padding);
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "PPEditorialNew-Regular";
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  color: var(--color-brown-dark);
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  position: absolute;
+  right: var(--container-padding);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  position: relative;
+  text-transform: lowercase;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-brown-dark);
+  transition: width var(--transition-base);
+}
+
+.nav-links a:hover {
+  color: var(--color-brown-dark);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}

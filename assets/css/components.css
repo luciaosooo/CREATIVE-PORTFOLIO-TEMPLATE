@@ -1,76 +1,4 @@
 /* ═══════════════════════════════════════════
-   NAVIGATION
-   ═══════════════════════════════════════════ */
-
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 2rem 0;
-  background: transparent;
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(61, 40, 23, 0.08);
-  transition: all var(--transition-base);
-  display: flex;
-  align-items: center;
-  min-height: 80px;
-}
-
-.nav.scrolled {
-  background: rgba(202, 231, 249, 0.914);
-  padding: 1.5rem 0;
-  min-height: 70px;
-}
-
-.nav-logo {
-  position: absolute;
-  left: var(--container-padding);
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: "PPEditorialNew-Regular";
-  font-size: 1.5rem;
-  letter-spacing: 0.05em;
-  color: var(--color-brown-dark);
-}
-
-.nav-links {
-  display: flex;
-  gap: 3rem;
-  position: absolute;
-  right: var(--container-padding);
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.nav-links a {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-  position: relative;
-  text-transform: lowercase;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--color-brown-dark);
-  transition: width var(--transition-base);
-}
-
-.nav-links a:hover {
-  color: var(--color-brown-dark);
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* ═══════════════════════════════════════════
          HERO SECTION
          ═══════════════════════════════════════════ */
 
@@ -415,6 +343,255 @@
     transform: translateY(0);
   }
 }
+
+/* ═══════════════════════════════════════════
+       ABOUT SECTION
+       ═══════════════════════════════════════════ */
+
+.about {
+  padding: var(--space-2xl) 0;
+  background: var(--color-dark-blue);
+}
+
+.about .section-title {
+  color: var(--color-cream);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.about-text {
+  font-size: var(--text-base);
+  color: var(--color-cream);
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-item {
+  background: #cae7f9c4;
+  backdrop-filter: blur(20px);
+  border: 1px solid #1b28551b;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.detail-item:hover {
+  background: rgb(248, 244, 232);
+  box-shadow: var(--shadow-sm);
+}
+
+.detail-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: var(--text-base);
+  color: var(--color-dark-blue);
+  list-style: none;
+}
+
+.detail-summary::-webkit-details-marker {
+  display: none;
+}
+
+.detail-icon {
+  font-size: 1.25rem;
+  transition: transform var(--transition-base);
+}
+
+.detail-item[open] .detail-icon {
+  transform: rotate(45deg);
+}
+
+.detail-content {
+  padding: 0 1.5rem 1.5rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detail-entry {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #1b28551b;
+}
+
+.detail-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.detail-entry h4 {
+  font-size: var(--text-base);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var (--color-dark-blue);
+}
+
+.detail-entry p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0.125rem 0;
+}
+
+.detail-year {
+  font-size: var(--text-xs);
+  font-style: italic;
+  color: #1b28551b;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills-tags span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--color-blue-light);
+  border-radius: var(--border-radius-full);
+  font-size: var(--text-sm);
+  color: var(--color-dark-blue);
+}
+
+/* ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ */
+
+.footer {
+  padding: var(--space-2xl) 0 var(--space-xl);
+  background: var(--color-blue-light);
+  border-top: 1px solid #1b28551b;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.footer-title {
+  font-size: clamp(6rem, 15vw, 12rem);
+  margin: 0;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.footer-title a {
+  color: var(--color-dark-blue);
+  text-decoration: none;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+  display: inline-block;
+}
+
+.footer-title a:hover {
+  opacity: 0.8;
+  transform: scale(1.3);
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-logo {
+  font-family: "PPEditorialNew-Regular";
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  color: var(--color-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact,
+.footer-location {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-end;
+}
+
+.footer-links a {
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+  transition: opacity var(--transition-base);
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
+
+/* ═══════════════════════════════════════════
+             SCROLL REVEAL ANIMATIONS
+             ═══════════════════════════════════════════ */
+
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-reveal="fade-up"] {
+  transform: translateY(30px);
+}
+
+[data-reveal="fade-down"] {
+  transform: translateY(-30px);
+}
+
+[data-reveal="fade-left"] {
+  transform: translateX(-30px);
+}
+
+[data-reveal="fade-right"] {
+  transform: translateX(30px);
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 /* ═══════════════════════════════════════════
        RESPONSIVE DESIGN
        ═══════════════════════════════════════════ */
