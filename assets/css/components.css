@@ -555,11 +555,32 @@
 .footer-links a {
   font-size: var(--text-base);
   color: var(--color-text-primary);
-  transition: opacity var(--transition-base);
+  position: relative;
+  padding-bottom: 4px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-dark-blue);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .footer-links a:hover {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 /* ═══════════════════════════════════════════
@@ -946,4 +967,25 @@
 [data-reveal].revealed {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+/* Navigation Links */
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-brown-dark);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
 }
