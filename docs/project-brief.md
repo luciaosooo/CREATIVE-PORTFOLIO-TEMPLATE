@@ -1,123 +1,139 @@
 # Project Brief
 
-**Student:** [Your Name]  
-**Handle:** @[your-github-username]  
-**Course:** Web Design 2025 · Fall  
-**Date:** [Fill in date - Week 2]
+**Student:** Lucía Álvarez Osorio  
+**Handle:** @luciaosooo  
+**Course:** Web Design 2025–2026  
+**Due Date:** 09/01/2026
 
----
+=========================================
 
 ## Project Concept
 
 ### What are you building?
 
-<!-- Describe your project in 2-3 sentences -->
+I am building a creative portfolio website template designed to showcase visual and multimedia design projects in a clear, elegant, and professional way.  
+The project functions both as a personal portfolio and as a reusable template that other creatives can easily customize for their own work.
 
 ### Who is it for?
 
-<!-- Define your target audience -->
+This project is aimed for graphic designers, visual creatives, and multimedia artists. Especially students or early-career professionals who want to present their work online using a contemporary, minimalist design without relying on heavy frameworks or CMS platforms.
 
 ### Why does it matter?
 
-<!-- Explain the purpose and value of your project -->
+A strong online portfolio is essential for creative professionals. This project provides an accessible, responsive, and visually engaging solution that helps creatives communicate their identity, skills, and projects effectively, while also demonstrating best practices in modern front-end web design.
 
----
+=========================================
 
 ## Technical Approach
 
 ### Core Technologies
 
-- [ ] HTML5 (semantic markup)
-- [ ] CSS3 (responsive design)
-- [ ] JavaScript (if applicable)
-- [ ] Other: \***\*\_\_\_\*\***
+- HTML5 (semantic markup)
+- CSS3 (responsive design)
+- JavaScript (vanilla)
+- Other: CSS Grid, Flexbox, Intersection Observer API
 
 ### Accessibility Goals
 
-- [ ] Semantic HTML structure
-- [ ] Proper heading hierarchy
-- [ ] Alt text for images
-- [ ] Keyboard navigation support
-- [ ] Color contrast compliance
-- [ ] Screen reader compatibility
+- Semantic HTML structure
+- Proper heading hierarchy
+- Alt text for images
+- Keyboard navigation support
+- Color contrast compliance
+- Screen reader compatibility
 
 ### Responsive Design Strategy
 
-- [ ] Mobile-first approach
-- [ ] Flexible grid system
-- [ ] Scalable typography
-- [ ] Optimized images
-- [ ] Touch-friendly interactions
+- Mobile-first approach
+- Flexible grid system (CSS Grid & Flexbox)
+- Scalable typography using CSS
+- Optimized and lazy-loaded images
+- Touch-friendly interactions
 
----
+=========================================
 
 ## Content Strategy
 
-### Key Sections/Pages
+### Key Sections / Pages
 
-1.
-2.
-3.
+1. Hero / Portfolio Overview
+2. Projects Showcase (with filtering and detail pages)
+3. About & Contact
 
 ### Content Sources
 
-<!-- Where will your content come from? -->
+All content is original and based on personal academic and creative projects, including branding, editorial design, photography, illustration, and 3D design.  
+Images are optimized and delivered via ImageKit or local assets.
 
 ### Multilingual Considerations
 
-- Primary language:
-- Secondary language (optional):
-- Translation strategy:
+- Primary language: English
+- Translation strategy: Clear content structure allows easy duplication and translation of sections if needed.
 
----
+=========================================
 
 ## Design Direction
 
 ### Visual Style
 
-<!-- Describe your aesthetic approach -->
+The visual direction is minimalist, elegant, and contemporary. It prioritizes clarity, whitespace, and visual hierarchy.  
+Subtle animations, parallax effects, and smooth transitions are used to enhance the user experience without distracting from the content.
 
 ### Color Palette
 
-<!-- List your main colors -->
+- Light blue
+- Cream
+- Dark blue
+- White
+
+These colors create a soft, professional, and modern aesthetic.
 
 ### Typography
 
-<!-- What fonts/typeface approach will you use? -->
+The project uses a custom font called PP Editorial New Regular, combining expressive editorial character with clean readability.  
+Typography is treated as a key design element, with careful attention to scale, spacing, and hierarchy.
 
-### Inspiration/References
+### Inspiration / References
 
-<!-- List 2-3 websites or designs that inspire your approach -->
+- Contemporary design studio portfolios
+- Editorial-style web layouts
+- Minimalist creative portfolio websites
 
----
+=========================================
 
 ## Success Metrics
 
 ### Week 4 Goals
 
-- [ ] Functional homepage
-- [ ] Basic responsive layout
-- [ ] Core content in place
-- [ ] Accessible markup
+- Functional homepage
+- Basic responsive layout
+- Core content in place
+- Accessible markup
 
 ### Final Project Goals
 
-- [ ] Fully responsive across devices
-- [ ] Meets WCAG 2.1 AA standards
-- [ ] Fast loading performance
-- [ ] Complete content
-- [ ] Polished visual design
+- Fully responsive across devices
+- Meets WCAG 2.1 AA accessibility principles
+- Fast loading and optimized performance
+- Complete and coherent content
+- Polished and professional visual design
 
----
+=========================================
 
 ## Reflection Questions
 
 ### What excites you most about this project?
 
+What excites me most is combining visual design and front-end development into a single project. Turning a design concept into a fully functional, reusable web template has been really rewarding.
+
 ### What challenges do you anticipate?
+
+Balancing aesthetics with performance and accessibility was a key challenge, particularly when implementing animations and visual effects while maintaining clarity and usability across devices.
 
 ### How does this project connect to your learning goals?
 
----
+This project directly reflects my learning goals by applying semantic HTML, responsive design, accessibility principles, and interaction design in a real project, while also reinforcing version control and documentation best practices.
 
-_This brief will evolve as your project develops. Update it as needed and reference it in your weekly commits._
+=========================================
+
+This brief evolved throughout the development of the project and reflects the final implemented solution

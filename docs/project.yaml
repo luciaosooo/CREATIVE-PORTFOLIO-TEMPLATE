@@ -1,50 +1,61 @@
-# Project metadata - fill this out by Week 4
-# This file will be used to generate your entry in the course showroom
-
 # Basic information
-handle: your-github-username
-name: Your Full Name
-email: your-email@udit.es
+handle: luciaosooo
+name: Lucía Álvarez Osorio
+email: lucia.alvarez@alumnos.udit.es
 
 # URLs (will be auto-generated if you follow naming conventions)
-github_url: https://github.com/your-username
-project_url: https://your-username.github.io/your-project-repo
-repository_url: https://github.com/your-username/your-project-repo
+github_url: https://github.com/luciaosooo
+project_url: https://luciaosooo.github.io/CREATIVE-PORTFOLIO-TEMPLATE/
+repository_url: https://github.com/luciaosooo/CREATIVE-PORTFOLIO-TEMPLATE
 
 # Project details
 title:
-  es: Título de tu Proyecto en Español
-  en: Your Project Title in English
+  es: Plantilla de Portfolio Creativo de Lucía Álvarez
+  en: Creative portfolio template by Lucía Álvarez
 
 abstract:
-  es: |
-    Una descripción concisa de tu proyecto web en español. 
-    Explica qué construyes, para quién y por qué es importante.
-  en: |
-    A concise description of your web project in English.
-    Explain what you're building, for whom, and why it matters.
+  es: Plantilla de portfolio web diseñada para diseñadores gráficos,
+    creativos visuales y artistas multimedia que desean mostrar su
+    trabajo de forma clara, elegante y profesional.
+    El proyecto combina diseño minimalista, estructura semántica y
+    animaciones suaves para crear una experiencia visual atractiva,
+    accesible y adaptable a cualquier dispositivo. Su objetivo es
+    servir como base reutilizable y personalizable para portfolios
+    creativos contemporáneos.
+  en: A creative portfolio website template designed for graphic designers,
+    visual creatives, and multimedia artists who want to present their
+    work in a clear, elegant, and professional way.
+    The project combines minimalist design, semantic structure, and
+    smooth animations to create an accessible, responsive, and visually
+    engaging experience. Its purpose is to act as a reusable and
+    customizable foundation for contemporary creative portfolios.
 
 # Technical tags (choose relevant ones)
 tags:
   - html5
   - css3
+  - javascript
   - responsive-design
   - accessibility
-  # Add more as relevant: javascript, sass, performance, etc.
+  - web-animation
+  - performance
+  - github-pages
 
 # Learning objectives you're focusing on
 learning_focus:
   - semantic-html
   - mobile-first-design
+  - responsive-layouts
   - web-accessibility
-  # Add more as you progress
+  - css-architecture
+  - interaction-design
 
 # Week tracking (update as you go)
 milestones:
-  week_1_setup: false
-  week_2_brief: false
-  week_4_metadata: false
-  week_5_showcase: false
+  week_1_setup: true
+  week_2_brief: true
+  week_4_metadata: true
+  week_5_showcase: true
 
-# Optional: link to your project brief
-brief_url: project-brief.md
+# Link to your project brief
+brief_url: https://ruvebal.github.io/web-atelier-udit/lessons/es/portfolio-template-brief/challenge/

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | Lucía Álvarez Osorio</title>
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Inline styles for 404 page -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Helvetica Neue", Arial, sans-serif;
+        background: #cae7f9;
+        color: #1b2855;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .error-container {
+        max-width: 700px;
+        text-align: center;
+      }
+
+      .error-code {
+        font-size: clamp(8rem, 25vw, 16rem);
+        font-weight: 300;
+        line-height: 1;
+        color: #1b2855;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.03em;
+      }
+
+      .error-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 400;
+        margin-bottom: 1.25rem;
+        color: #1b2855;
+        letter-spacing: -0.01em;
+      }
+
+      .error-message {
+        font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+        color: rgba(27, 40, 85, 0.7);
+        margin-bottom: 3rem;
+        line-height: 1.7;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .btn-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 2.5rem;
+        background: transparent;
+        color: #1b2855;
+        border: 2px solid #1b2855;
+        border-radius: 9999px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+
+      .btn-home:hover {
+        background: #1b2855;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(27, 40, 85, 0.25);
+      }
+
+      .btn-home svg {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .btn-home:hover svg {
+        transform: translateX(4px);
+      }
+
+      /* Accessibility */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .error-code {
+          margin-bottom: 1rem;
+        }
+
+        .error-message {
+          margin-bottom: 2.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 1.5rem;
+        }
+
+        .btn-home {
+          padding: 0.875rem 2rem;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-container">
+      <div class="error-code">404</div>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-message">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+
+      <a href="index.html" class="btn-home">
+        Go Home
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </body>
+</html>
