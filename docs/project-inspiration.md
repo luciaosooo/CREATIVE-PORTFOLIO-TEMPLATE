@@ -26,6 +26,8 @@
 
 - https://stephenmickle.xyz/  
   Inspired the balance between personal identity and portfolio presentation, as well as the use of subtle interactions and animations.
+- https://ik.imagekit.io/gwcamwpxu/portfolio/wireframe1.png
+  I also created a initial wireframe in figma to base the design of my webpage out of. Some changes were made in the final result of the web, but the color scheme, typography and overall style of the design remained.
 
 ===============
 

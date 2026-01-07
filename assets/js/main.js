@@ -69,6 +69,7 @@ document.querySelectorAll("[data-reveal]").forEach((el) => {
 // 2. PROJECT FILTER SYSTEM
 // ════════════════════════════════════════════
 
+// Enhanced filter system with keyboard support
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
 
@@ -77,40 +78,65 @@ const filterProjects = (category) => {
   projectCards.forEach((card, index) => {
     const cardCategory = card.getAttribute("data-category");
 
-    // Hide all cards first
     card.classList.remove("show");
     card.classList.add("hidden");
 
-    // Show matching cards with stagger effect
     if (category === "all" || cardCategory === category) {
       setTimeout(() => {
         card.classList.remove("hidden");
         card.classList.add("show");
-      }, index * 50); // 50ms stagger delay
+      }, index * 50);
     }
   });
 };
 
-// Add click handlers to filter buttons
+// Click handler
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    // Remove active class from all buttons
     filterButtons.forEach((btn) => btn.classList.remove("active"));
-
-    // Add active class to clicked button
     button.classList.add("active");
-
-    // Get filter category
     const filterValue = button.getAttribute("data-filter");
-
-    // Filter projects
     filterProjects(filterValue);
+  });
+
+  // Keyboard handler (Enter, Space)
+  button.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      button.click();
+    }
   });
 });
 
-// Initialize: show all projects on load
+// Initialize on load
 window.addEventListener("DOMContentLoaded", () => {
   filterProjects("all");
+  // Set first button as active
+  if (filterButtons.length > 0) {
+    filterButtons[0].classList.add("active");
+    filterButtons[0].setAttribute("aria-pressed", "true");
+  }
+});
+
+// Tab navigation for filter buttons
+filterButtons.forEach((button, index) => {
+  button.addEventListener("keydown", (e) => {
+    let nextButton = null;
+
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      nextButton = filterButtons[index + 1] || filterButtons[0];
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      nextButton =
+        filterButtons[index - 1] || filterButtons[filterButtons.length - 1];
+    }
+
+    if (nextButton) {
+      nextButton.focus();
+      nextButton.click();
+    }
+  });
 });
 
 // ════════════════════════════════════════════

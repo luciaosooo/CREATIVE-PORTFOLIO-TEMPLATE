@@ -28,6 +28,12 @@ Generative AI tools were used as support tools, not as substitutes for understan
 - Claude was used during debugging and when implementing specific JavaScript functionality. In these cases, it was asked to explain how certain features could be implemented, especially when dealing with concepts that were unfamiliar at the time.
 - GitHub Copilot (VS Code) was used for code suggestions and autocompletion, mainly to speed up repetitive tasks.
 
+For certain features, such as the project filtering system, I asked AI to explain how the functionality could be implemented conceptually and step by step. After reviewing the explanation, I implemented the solution myself, adapting it to the structure of my project and making sure I fully understood how the JavaScript logic worked before including it in the final code.
+
+AI assistance was also used to better understand small interaction details, such as the animated underline effect on navigation links. In these cases, I requested explanations of different methods as to how the animation could be achieved using CSS (for example, through pseudo-elements and transitions), then recreated and adjusted the effect manually to match the visual style of the project.
+
+Additionally, when I needed to apply a code change consistently across multiple files, AI was used to help reason about the most efficient and maintainable way to propagate that change. This allowed me to avoid repetitive errors while keeping the codebase consistent. All changes were reviewed and applied by me.
+
 In all cases, AI-generated suggestions were only incorporated after being fully understood. Any code or solution was reviewed, adapted, and only used if I was confident that I could recreate it independently. AI was treated as a learning and productivity aid, while most technical decisions and implementations were guided by course notes and previously learned concepts, particularly for animations and layout techniques.
 
 ==========================
